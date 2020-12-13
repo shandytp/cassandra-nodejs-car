@@ -1,0 +1,30 @@
+<p class="text-center bg-info">Add User</p>
+{{#if errorOccured}}
+<div class="alert alert-danger" role="alert"><strong>Warning!</strong> An error occured.</div>
+{{/if}}
+<form class="form-horizontal" role="form" action="/adduser" method="post">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">username</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="username" value="{{username}}" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">first_name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="first_name" value="{{first_name}}" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">last_name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="last_name" value="{{last_name}}" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-info">Add</button>
+            <a href="/" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+{{#if rows}}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>date</td>
+            <td>username</td>
+            <td>brand</td>
+            <td>color</td>
+            <td>mileage</td>
+            <td>model</td>
+            <td>price</td>
+            <td>year</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <td>{{formatDate date}}</td>
+            <td>{{username}}</td>
+            <td>{{brand}}</td>
+            <td>{{color}}</td>
+            <td>{{mileage}}</td>
+            <td>{{model}}</td>
+            <td>{{price}}</td>
+            <td>{{year}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong>
+    There are no car offers at the moment
+</div>
+{{/if}}
+<p>
+    <a href="./show/addoffer" class="btn btn-primary">Add Offer</a>
+    <a href="./show/adduser" class="btn btn-info">Add User</a>
+    <a href="./show/search" class="btn btn-success">Search</a>
+</p>
